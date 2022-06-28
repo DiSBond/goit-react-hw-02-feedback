@@ -1,12 +1,14 @@
 import { FBOContainer } from "./FeedBackOptions.styled";
-const FeedbackOptions = ({options, onLeaveFeedback}) => {
 
-    const ArrayState = Object.keys(options);
+import propTypes from 'prop-types';
+
+
+const FeedbackOptions = ({options, onLeaveFeedback}) => {
 
     return (
 
         <FBOContainer>
-        {ArrayState.map(item => {
+        {options.map(item => {
         return <button key={item} onClick={onLeaveFeedback}>{item}</button>
       })}
         </FBOContainer>
@@ -16,3 +18,7 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
 
 export default FeedbackOptions;
 
+FeedbackOptions.propTypes = {
+  option: propTypes.objectOf(propTypes.string),
+  onLeaveFeedback: propTypes.func,
+}

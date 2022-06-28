@@ -1,4 +1,5 @@
 import { NotificationST } from "./Notification.styled"
+import propTypes from 'prop-types';
 
 function Notification({massage}) {
     return (
@@ -9,3 +10,7 @@ function Notification({massage}) {
 }
 
 export default Notification
+
+Notification.propTypes = {
+    massage: propTypes.string,
+}

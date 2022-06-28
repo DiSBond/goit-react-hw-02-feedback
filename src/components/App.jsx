@@ -40,15 +40,15 @@ export class App extends Component {
 
   render() {
 
-    const {good, neutral, bad} = this.state
+    const ArrayState = Object.keys(this.state);
 
     return (
       <div>
         <Section title={"Please leave feedback"}>
-          <FeedbackOptions options={this.state} onLeaveFeedback={this.handleFeedback}/>
+          <FeedbackOptions options={ArrayState} onLeaveFeedback={this.handleFeedback}/>
         </Section>
         <Section title={"Section"}>
-         {this.state.good || this.state.neutral || this.state.bad ? <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback} positivePercentage={this.countPositiveFeedbackPercentage}/> : <Notification massage={"There is no feedback"}/>}
+         {this.state.good || this.state.neutral || this.state.bad ? <Statistics ArrayState={ArrayState} MainState={this.state} total={this.countTotalFeedback} positivePercentage={this.countPositiveFeedbackPercentage}/> : <Notification massage={"There is no feedback"}/>}
         </Section>
       </div>
     )
