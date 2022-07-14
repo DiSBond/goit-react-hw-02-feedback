@@ -48,7 +48,7 @@ export class App extends Component {
           <FeedbackOptions options={ArrayState} onLeaveFeedback={this.handleFeedback}/>
         </Section>
         <Section title={"Section"}>
-         {this.state.good || this.state.neutral || this.state.bad ? <Statistics ArrayState={ArrayState} MainState={this.state} total={this.countTotalFeedback} positivePercentage={this.countPositiveFeedbackPercentage}/> : <Notification massage={"There is no feedback"}/>}
+         {this.state.good || this.state.neutral || this.state.bad ? <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback} positivePercentage={this.countPositiveFeedbackPercentage}/> : <Notification massage={"There is no feedback"}/>}
         </Section>
       </div>
     )
