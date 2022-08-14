@@ -1,16 +1,16 @@
-import { NotificationST } from "./Notification.styled"
+import { NotificationST } from './Notification.styled';
 import propTypes from 'prop-types';
 
-function Notification({massage}) {
-    return (
-        <div>
-            <NotificationST>{massage}</NotificationST>
-        </div>
-    )
+function Notification({ massage }) {
+  return (
+    <div>
+      <NotificationST>{massage}</NotificationST>
+    </div>
+  );
 }
 
-export default Notification
+export default Notification;
 
 Notification.propTypes = {
-    massage: propTypes.string,
-}
+  massage: propTypes.string,
+};
