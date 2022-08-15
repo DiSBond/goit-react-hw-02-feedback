@@ -3,6 +3,7 @@ import { FBOContainer } from './FeedBackOptions.styled';
 import propTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  console.log(options);
   return (
     <FBOContainer>
       {options.map(item => {
@@ -19,6 +20,6 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  option: propTypes.objectOf(propTypes.string),
-  onLeaveFeedback: propTypes.func,
+  option: propTypes.arrayOf(propTypes.string).isRequired,
+  onLeaveFeedback: propTypes.func.isRequired,
 };

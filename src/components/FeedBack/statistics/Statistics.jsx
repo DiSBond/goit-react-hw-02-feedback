@@ -20,7 +20,7 @@ const Statistics = ({ total, positivePercentage, good, neutral, bad }) => {
         Total <span>{total()}</span>
       </p>
       <p>
-        Posotove feedback <span>{positivePercentage()}%</span>
+        Positive feedback <span>{positivePercentage()}%</span>
       </p>
     </StatisticContainer>
   );
@@ -29,8 +29,9 @@ const Statistics = ({ total, positivePercentage, good, neutral, bad }) => {
 export default Statistics;
 
 Statistics.propTypes = {
-  ArrayState: propTypes.arrayOf(propTypes.string),
-  total: propTypes.func,
-  positivePercentage: propTypes.func,
-  MainState: propTypes.objectOf(propTypes.number),
+  total: propTypes.func.isRequired,
+  positivePercentage: propTypes.func.isRequired,
+  good: propTypes.number.isRequired,
+  neutral: propTypes.number.isRequired,
+  bad: propTypes.number.isRequired,
 };
