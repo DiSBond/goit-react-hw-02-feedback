@@ -26,6 +26,7 @@ const Statistics = ({ total, positivePercentage, good, neutral, bad }) => {
   );
 };
 
+// corect
 export default Statistics;
 
 Statistics.propTypes = {
